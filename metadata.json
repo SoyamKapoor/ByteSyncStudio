@@ -1,0 +1,7 @@
+{
+  "name": "ByteSync Studio | AI Engineering & Digital Transformation",
+  "description": "Intelligent systems. Built to scale. ByteSync Studio builds custom AI solutions, machine learning systems, web platforms, and automated workflows.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

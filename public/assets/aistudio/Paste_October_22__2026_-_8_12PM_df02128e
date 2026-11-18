@@ -1,0 +1,1214 @@
+# PROJECT: BYTESYNC STUDIO — PREMIUM AI ENGINEERING AGENCY WEBSITE
+
+## YOUR ROLE
+
+Act as a senior full-stack developer, software architect, premium UI/UX designer, database engineer, and conversion-focused web developer.
+
+Your task is to build a complete, professional website for ByteSync Studio using:
+
+- Next.js with App Router
+- TypeScript
+- Tailwind CSS
+- Supabase with PostgreSQL
+- Supabase Auth for administrator authentication
+- React Hook Form
+- Zod
+- Lucide React
+- Resend or another configurable transactional email provider
+
+Work directly inside the currently opened project workspace.
+
+IMPORTANT:
+
+Do not simply generate a plan, a design concept, or code snippets in the conversation.
+
+You must CREATE THE ACTUAL PROJECT FILES, WRITE THE CODE, IMPLEMENT THE WEBSITE, RUN AVAILABLE CHECKS, AND FIX IDENTIFIED ERRORS.
+
+If the workspace is empty, initialize the project.
+
+If an existing project is present, inspect it first and preserve useful existing code and configuration.
+
+Do not overwrite existing files blindly.
+
+Do not stop after creating the homepage. Implement the complete requested website and consultation workflow.
+
+If credentials for external services are unavailable, implement the appropriate integration structure, document the configuration steps, and clearly identify which functionality remains unconfigured.
+
+Do not claim an integration is functional unless it has actually been configured and tested.
+
+---
+
+# 1. BUSINESS OVERVIEW
+
+Business name: ByteSync Studio
+
+Instagram handle: @bytesync_studio
+
+Primary tagline:
+
+"Your business. Digitally transformed."
+
+Secondary tagline:
+
+"Intelligent systems. Built to scale."
+
+Business description:
+
+ByteSync Studio is an AI engineering and digital transformation agency that helps businesses modernize their operations through AI solutions, machine learning, custom web and backend systems, software integrations, and business automation.
+
+Target audiences:
+
+1. Real estate agents and real estate companies.
+2. Doctors, clinics, and healthcare organizations.
+3. Startups and growing businesses.
+4. Established businesses looking to digitize their operations.
+5. Companies seeking AI engineering, software development, or workflow automation.
+
+The website must communicate technical competence, reliability, professionalism, and practical business value.
+
+The primary conversion goal is to get qualified visitors to book or request a consultation.
+
+The secondary goals are to showcase technical capabilities, present genuine portfolio work, and encourage visitors to contact the agency.
+
+Avoid exaggerated claims, fake client logos, fabricated testimonials, invented statistics, and unsupported guarantees.
+
+---
+
+# 2. EXISTING LOGO — MANDATORY
+
+I have already added the original ByteSync Studio logo to the project.
+
+Exact asset location:
+
+public/images/bytesync_logo.png
+
+Use this original asset throughout the website.
+
+In Next.js, its public URL is:
+
+/images/bytesync_logo.png
+
+Before implementing the design, verify that the file exists.
+
+Use the original logo in:
+
+- Navigation bar.
+- Footer.
+- Appropriate brand-related placements.
+- Open Graph or favicon assets only if the original file is suitable for that use.
+
+LOGO RULES:
+
+- Do not recreate the logo.
+- Do not generate a replacement logo.
+- Do not change its typography or emblem.
+- Do not distort its proportions.
+- Do not recolor it.
+- Do not crop important parts.
+- Preserve transparency if present.
+- Choose appropriate dimensions and spacing.
+- Ensure the logo remains legible on the dark background.
+
+Use the Next.js Image component where appropriate.
+
+If the file is missing or cannot be read, report the issue clearly rather than silently substituting a different logo.
+
+---
+
+# 3. BRAND IDENTITY
+
+The brand identity must remain consistent throughout every section.
+
+VISUAL DIRECTION:
+
+Premium.
+Minimal.
+Professional.
+Futuristic.
+Technical.
+Business-focused.
+
+COLOR PALETTE:
+
+Use the following as initial design tokens and adjust only if needed to complement the original logo.
+
+- Main background: #050B14
+- Secondary background: #091321
+- Card background: #0D1928
+- Electric blue: #087BFF
+- Cyan: #00D9F5
+- Primary text: #F4F7FB
+- Secondary text: #A8B5C7
+- Border color: rgba(100, 160, 220, 0.18)
+
+TYPOGRAPHY:
+
+Use a modern, highly readable sans-serif typeface.
+
+Maintain clear heading hierarchy, comfortable line lengths, and generous whitespace.
+
+DESIGN ELEMENTS:
+
+- Subtle technical grids.
+- Fine network lines.
+- Small connected nodes.
+- Refined blue and cyan accents.
+- Restrained gradients.
+- Carefully designed cards.
+- Subtle borders.
+- Smooth, lightweight animations.
+- Consistent button styles.
+
+AVOID:
+
+- Generic AI website templates.
+- Excessive neon glow.
+- Gaming-style aesthetics.
+- Oversized glowing spheres.
+- Unnecessary glassmorphism.
+- Excessive gradients.
+- Random floating shapes.
+- Unrelated stock photography.
+- Overly complicated animations.
+- Dense paragraphs.
+- Crowded layouts.
+- Fake client logos and statistics.
+
+The website should resemble a premium AI engineering consultancy that a real estate company, medical clinic, startup, or established business would trust.
+
+Do not make every element glow blue.
+
+Use color and effects selectively to create a refined visual hierarchy.
+
+---
+
+# 4. PROJECT INITIALIZATION
+
+Inspect the workspace before making changes.
+
+If necessary, initialize a Next.js application using:
+
+- TypeScript.
+- App Router.
+- Tailwind CSS.
+- ESLint.
+- A src directory.
+- Appropriate import aliases.
+
+Use stable, compatible package versions.
+
+Create the required configuration files and install the dependencies needed by the implementation.
+
+Use npm unless the existing project already uses another package manager.
+
+Do not create a second nested project unnecessarily if the workspace is already configured.
+
+---
+
+# 5. WEBSITE ARCHITECTURE
+
+Create a polished, responsive, single-page agency website with these sections:
+
+1. Navigation.
+2. Hero.
+3. Capabilities strip.
+4. Services.
+5. Industry solutions.
+6. How we work.
+7. Portfolio and case studies.
+8. Why ByteSync Studio.
+9. Testimonials or technical credibility.
+10. Consultation booking.
+11. Contact.
+12. Footer.
+
+Also create dedicated pages for:
+
+- Privacy Policy.
+- Terms of Service.
+- Administrator login.
+- Administrator dashboard.
+
+Use reusable components, centralized content configuration, and clean TypeScript types.
+
+All major navigation links must work.
+
+All CTA buttons must have real destinations or actions.
+
+Do not leave nonfunctional buttons in the finished website.
+
+---
+
+# 6. NAVIGATION BAR
+
+Create a premium sticky navigation bar.
+
+LEFT:
+
+Original ByteSync Studio logo.
+
+NAVIGATION:
+
+- Home.
+- Services.
+- Solutions.
+- Our Work.
+- About.
+- Contact.
+
+PRIMARY CTA:
+
+"Book a Consultation"
+
+DESKTOP:
+
+Maintain balanced spacing and a clean horizontal layout.
+
+MOBILE:
+
+Implement a responsive hamburger menu with accessible open, close, and navigation behavior.
+
+The navigation should become subtly more opaque as the visitor scrolls.
+
+Use smooth scrolling with correct offsets for the sticky header.
+
+Ensure all controls work using a keyboard and have visible focus states.
+
+---
+
+# 7. HERO SECTION
+
+This is the most important visual section.
+
+Use the following copy.
+
+EYEBROW:
+
+AI ENGINEERING · DIGITAL TRANSFORMATION
+
+HEADLINE:
+
+"Your Business. Smarter by Design."
+
+DESCRIPTION:
+
+"We build intelligent AI solutions, custom web systems, and automation workflows that help businesses streamline operations, solve complex problems, and scale with confidence."
+
+PRIMARY CTA:
+
+"Book a Consultation"
+
+SECONDARY CTA:
+
+"Explore Our Work"
+
+CAPABILITY LABELS:
+
+AI & Machine Learning
+
+Custom Software Systems
+
+Business Automation
+
+VISUAL DESIGN:
+
+On desktop, use a two-column layout.
+
+The left side contains the headline, description, and CTA buttons.
+
+The right side contains a sophisticated abstract technical visualization.
+
+Use subtle connected nodes, system diagrams, fine lines, and restrained cyan/electric-blue accents to represent intelligent systems and connected workflows.
+
+Build the visual with lightweight CSS, SVG, or other efficient techniques where appropriate.
+
+Do not use generic AI robot illustrations.
+
+Do not use an enormous glowing sphere as the main visual.
+
+On mobile, stack the content naturally and preserve readability.
+
+The first screen should clearly communicate what the agency does and how to contact it.
+
+---
+
+# 8. CAPABILITIES STRIP
+
+Create a compact strip beneath the hero.
+
+Heading:
+
+"ENGINEERING SMARTER DIGITAL SYSTEMS"
+
+Display:
+
+AI Engineering · Machine Learning · Web Systems · Backend Development · Automation · MLOps
+
+Use subtle separators and restrained styling.
+
+Do not invent client counts, revenue statistics, or project numbers.
+
+---
+
+# 9. SERVICES SECTION
+
+Heading:
+
+"Technology Built Around Your Business."
+
+Supporting text:
+
+"From intelligent automation to custom software, we build practical digital solutions around your business needs."
+
+Create four premium service cards.
+
+SERVICE 1: AI & MACHINE LEARNING
+
+Description:
+
+"Intelligent solutions that help businesses analyze information, automate complex tasks, and improve digital experiences."
+
+Potential services:
+
+- Custom AI integrations.
+- Machine learning solutions.
+- AI-powered assistants.
+- Intelligent document processing.
+- Predictive analytics.
+
+SERVICE 2: CUSTOM WEB & BACKEND SYSTEMS
+
+Description:
+
+"Reliable digital platforms and backend infrastructure designed around your business requirements."
+
+Potential services:
+
+- Business websites.
+- Web applications.
+- Backend development.
+- API development and integrations.
+- Database design.
+- Internal portals.
+
+SERVICE 3: BUSINESS PROCESS AUTOMATION
+
+Description:
+
+"Reduce repetitive work by connecting systems and creating efficient business workflows."
+
+Potential services:
+
+- Workflow automation.
+- Lead management.
+- Appointment request workflows.
+- Email automation.
+- Third-party software integrations.
+
+SERVICE 4: MLOps & AI ENGINEERING
+
+Description:
+
+"Engineering support for deploying, monitoring, and maintaining machine learning systems."
+
+Potential services:
+
+- Model deployment.
+- Automated training pipelines.
+- Model monitoring.
+- CI/CD workflows.
+- AI infrastructure support.
+
+Each card must include:
+
+- A clean Lucide icon.
+- Service title.
+- Short description.
+- A concise list of offerings.
+- A clear CTA.
+
+The CTA should scroll to the consultation form and preselect the corresponding service.
+
+Make service content editable through centralized configuration.
+
+Only present services ByteSync Studio can genuinely deliver.
+
+---
+
+# 10. INDUSTRY SOLUTIONS
+
+Heading:
+
+"Technology That Fits Your Business."
+
+Supporting text:
+
+"Every business faces different challenges. We help identify practical digital solutions around the way your organization works."
+
+Create four industry cards.
+
+REAL ESTATE
+
+Potential solutions:
+
+- Property listing websites.
+- Lead capture systems.
+- Inquiry management workflows.
+- AI-assisted lead qualification.
+
+HEALTHCARE & CLINICS
+
+Potential solutions:
+
+- Clinic websites.
+- Appointment request systems.
+- Administrative workflow automation.
+- Secure digital information workflows.
+
+STARTUPS & GROWING BUSINESSES
+
+Potential solutions:
+
+- MVP development.
+- Custom web applications.
+- AI integrations.
+- Backend systems and APIs.
+
+ESTABLISHED BUSINESSES
+
+Potential solutions:
+
+- Internal dashboards.
+- Business process automation.
+- Software integrations.
+- Custom reporting systems.
+
+CTA:
+
+"Discuss Your Requirements"
+
+This CTA should open or scroll to the consultation form.
+
+Do not imply that every listed solution is already a completed product.
+
+Healthcare solutions must be designed with appropriate privacy, access control, and security requirements.
+
+---
+
+# 11. HOW WE WORK
+
+Heading:
+
+"A Clear Path From Idea to Implementation."
+
+Create a four-step process.
+
+01 — DISCOVER
+
+"Understand your business, challenges, and objectives."
+
+02 — PLAN
+
+"Define requirements, technical direction, and implementation scope."
+
+03 — BUILD
+
+"Develop, test, and refine a solution around your needs."
+
+04 — SCALE
+
+"Improve and expand your digital systems as your business evolves."
+
+Use a refined horizontal timeline on desktop and a vertical timeline on mobile.
+
+Keep the section visually simple.
+
+---
+
+# 12. PORTFOLIO AND CASE STUDIES
+
+Create a reusable portfolio section.
+
+Heading:
+
+"Selected Work & Technical Projects"
+
+Supporting text:
+
+"Explore projects that demonstrate our approach to solving technical problems."
+
+Each project should support:
+
+- Project title.
+- Category.
+- Short description.
+- Problem statement.
+- Solution.
+- Technologies used.
+- Project image or screenshot.
+- External project URL.
+- Optional detailed case study.
+
+Suggested categories:
+
+- AI & Machine Learning.
+- Web Development.
+- Backend Systems.
+- Automation.
+- Other.
+
+Create a project configuration file, initially:
+
+src/config/portfolio.ts
+
+Use this file for project entries.
+
+I will provide the actual portfolio URL and project information later.
+
+Do not invent a portfolio URL.
+
+Add a "View Full Portfolio" button that uses a configurable URL.
+
+If the URL has not been configured, hide the button or disable the destination with an appropriate development note rather than linking to a fake address.
+
+Do not fabricate client projects.
+
+Accurately label academic projects, independent work, collaborations, and client engagements.
+
+If there are no verified portfolio entries, display a polished empty state or a clearly labelled technical demonstration.
+
+---
+
+# 13. WHY BYTESYNC STUDIO
+
+Heading:
+
+"Practical Technology. Purposeful Engineering."
+
+Create four differentiators.
+
+BUSINESS-FIRST APPROACH
+
+"Technology decisions should support real business objectives."
+
+PRACTICAL AI
+
+"We focus on useful solutions to operational problems, not technology for its own sake."
+
+SCALABLE ENGINEERING
+
+"Build with maintainability and future requirements in mind."
+
+CLEAR COMMUNICATION
+
+"Understand the scope, approach, and next steps before committing."
+
+Use a balanced grid with restrained accents.
+
+Do not invent awards, certifications, partnerships, or customer statistics.
+
+---
+
+# 14. TESTIMONIALS AND CREDIBILITY
+
+Create a testimonial component with configurable content.
+
+Each testimonial must support:
+
+- Client name.
+- Role.
+- Organization.
+- Feedback.
+- Optional project reference.
+- Permission to display the feedback.
+
+Never fabricate testimonials or attribute fictional quotes to real people.
+
+Create:
+
+src/config/testimonials.ts
+
+If no verified testimonials are available, hide the testimonial section automatically.
+
+Instead, show a technical capabilities section or verified project highlights.
+
+The page must remain complete and professional without testimonials.
+
+---
+
+# 15. CONSULTATION BOOKING FORM
+
+This is a core business feature.
+
+Heading:
+
+"Let's Solve Your Next Technical Challenge."
+
+Supporting text:
+
+"Tell us about your business and what you're looking to improve. We'll review your requirements and discuss the next steps."
+
+Create a polished form with these fields:
+
+- Full name — required.
+- Work email — required.
+- Company name — optional.
+- Industry — required.
+- Service required — required.
+- Project description — required.
+- Project budget — optional.
+- Consultation type — configurable.
+- Preferred date — optional if manual scheduling is used.
+- Preferred time — optional if manual scheduling is used.
+
+INDUSTRY OPTIONS:
+
+- Real Estate.
+- Healthcare & Clinics.
+- Technology / Startup.
+- E-commerce.
+- Professional Services.
+- Other.
+
+SERVICE OPTIONS:
+
+- AI & Machine Learning.
+- Custom Web Development.
+- Backend Systems & APIs.
+- Business Automation.
+- MLOps & AI Engineering.
+- AI Integration.
+- Not Sure Yet.
+
+CONSULTATION TYPES:
+
+- Free Discovery Call.
+- Paid Technical Consultation.
+
+The price, duration, and currency of paid consultations must be configurable.
+
+Do not invent a price.
+
+If consultation prices have not been configured, do not show a made-up amount or accept a payment for an undefined service.
+
+FORM REQUIREMENTS:
+
+- Use React Hook Form where appropriate.
+- Validate data with Zod.
+- Validate again on the server.
+- Provide inline error messages.
+- Show loading and success states.
+- Prevent accidental duplicate submissions.
+- Display clear error messages.
+- Keep the interface accessible.
+- Add appropriate spam protection.
+- Do not expose private booking data.
+- Use server-side processing for sensitive operations.
+
+After a successful request, show a professional confirmation screen.
+
+Clearly distinguish a received request from a confirmed appointment.
+
+---
+
+# 16. DATABASE AND SUPABASE
+
+Use Supabase PostgreSQL for persistent storage.
+
+Create actual SQL migration files inside:
+
+supabase/migrations/
+
+Create a consultation bookings table containing appropriate fields, including:
+
+- id.
+- full_name.
+- email.
+- company_name.
+- industry.
+- service.
+- project_description.
+- project_budget.
+- consultation_type.
+- preferred_date.
+- preferred_time.
+- confirmed_at.
+- booking_status.
+- payment_status.
+- created_at.
+- updated_at.
+
+Use UUID primary keys where appropriate.
+
+Add useful indexes and database constraints.
+
+Suggested booking statuses:
+
+- pending_review.
+- awaiting_payment.
+- confirmed.
+- reschedule_requested.
+- completed.
+- cancelled.
+
+Suggested payment statuses:
+
+- not_required.
+- pending.
+- paid.
+- failed.
+- refunded.
+
+Use appropriate Row Level Security policies.
+
+Public visitors must not be able to read private booking records.
+
+Route booking creation through a validated server-side endpoint.
+
+Keep privileged credentials server-side.
+
+Create separate, appropriately configured Supabase clients for browser and server usage when required.
+
+Document the database setup process.
+
+Do not claim the database is connected until valid configuration has been supplied and a real connection has been tested.
+
+---
+
+# 17. EMAIL NOTIFICATIONS
+
+Implement transactional email notifications using Resend or another configurable provider.
+
+After a booking has been successfully saved:
+
+1. Notify the ByteSync Studio business email.
+2. Send the visitor an acknowledgement email.
+3. Include the booking reference.
+4. Include relevant consultation details.
+5. Use a professional branded email layout.
+6. Explain the next steps.
+
+For manually reviewed requests, the email must say:
+
+"Your consultation request has been received. Our team will review your details and contact you to confirm the appointment."
+
+Do not say the appointment is confirmed unless it has actually been confirmed.
+
+If email delivery fails after a booking is saved:
+
+- Preserve the booking.
+- Log the error safely.
+- Provide an appropriate retry mechanism or record notification status.
+
+Do not expose the email API key in browser code.
+
+Document sender-domain verification and required environment variables.
+
+---
+
+# 18. FUTURE PAYMENT INTEGRATION
+
+Prepare the application for paid consultations.
+
+Do not require payment for free discovery calls.
+
+For paid consultations, the intended flow is:
+
+1. Visitor selects a consultation type.
+2. The price and duration are displayed.
+3. The visitor submits their details.
+4. A pending booking is created.
+5. A configured payment provider creates a secure checkout session.
+6. The visitor completes payment.
+7. The provider confirms payment through a verified server-side webhook.
+8. The booking status is updated.
+9. The appropriate confirmation email is sent.
+
+Do not trust browser query parameters as proof of payment.
+
+Verify payments on the server.
+
+Use idempotent webhook handling.
+
+Do not store raw payment card information.
+
+Keep the payment integration modular so a suitable provider can be selected later based on business eligibility, supported currencies, customer location, and fees.
+
+If no payment provider has been configured, keep the payment functionality disabled and clearly explain the setup requirements.
+
+Free discovery booking must continue to work independently.
+
+---
+
+# 19. ADMIN DASHBOARD
+
+Create a protected administrator area.
+
+Suggested route:
+
+/admin
+
+Create an administrator login route:
+
+/admin/login
+
+The dashboard should support:
+
+- Viewing consultation requests.
+- Searching by name, email, or company.
+- Filtering by status.
+- Filtering by industry.
+- Filtering by requested service.
+- Viewing complete booking details.
+- Updating booking status.
+- Recording internal notes.
+- Managing appointment confirmation.
+- Viewing payment status.
+- Managing portfolio entries where practical.
+- Managing testimonials where practical.
+
+Use Supabase Auth or an appropriate secure authentication implementation.
+
+Protect administrative pages and API routes with server-side authorization checks.
+
+Do not hard-code production passwords.
+
+Do not expose private booking records to unauthorized visitors.
+
+If full portfolio management would substantially delay the initial release, prioritize a fully functional consultation dashboard and document portfolio administration as a future enhancement.
+
+---
+
+# 20. CONTACT SECTION
+
+Heading:
+
+"Have a Business Problem Worth Solving?"
+
+Supporting text:
+
+"Let's explore how the right technology can help your business work smarter."
+
+Include:
+
+- Original ByteSync Studio logo where appropriate.
+- Instagram: @bytesync_studio.
+- Configurable business email.
+- Configurable LinkedIn URL.
+- Optional configurable WhatsApp link.
+- Book a Consultation button.
+
+Do not invent an email address, phone number, or LinkedIn URL.
+
+Centralize contact details in:
+
+src/config/site.ts
+
+Make sure every configured link works correctly.
+
+---
+
+# 21. FOOTER
+
+Include:
+
+- Original ByteSync Studio logo.
+- Brand tagline.
+- Short agency description.
+- Navigation links.
+- Services links.
+- Contact details.
+- Privacy Policy.
+- Terms of Service.
+- Copyright notice.
+
+Suggested description:
+
+"AI engineering, custom software, and intelligent automation for businesses ready to grow digitally."
+
+Maintain the established dark navy and cyan identity.
+
+---
+
+# 22. PRIVACY AND TERMS
+
+Create dedicated pages:
+
+/privacy
+
+/terms
+
+Include draft content covering:
+
+- Information collected through consultation forms.
+- How the information is used.
+- How visitors can contact the business about their information.
+- Consultation request handling.
+- Appointment confirmation.
+- Cancellation and rescheduling.
+- Payment terms where applicable.
+- Service limitations.
+
+Do not claim legal compliance without verification.
+
+Clearly identify the legal content as a draft requiring review before launch.
+
+Avoid collecting unnecessary sensitive information.
+
+---
+
+# 23. RESPONSIVE DESIGN AND ACCESSIBILITY
+
+Ensure the website works properly on:
+
+- Desktop.
+- Laptop.
+- Tablet.
+- Mobile.
+
+Implement:
+
+- Semantic HTML.
+- Accessible form labels.
+- Keyboard navigation.
+- Visible focus indicators.
+- Appropriate color contrast.
+- Reduced-motion support.
+- Responsive images.
+- Mobile-friendly navigation.
+- Proper heading hierarchy.
+- Useful error messages.
+
+Avoid horizontal overflow and excessively small text.
+
+The design must remain premium on small screens.
+
+---
+
+# 24. SEO AND PERFORMANCE
+
+Implement:
+
+- Page title.
+- Meta description.
+- Open Graph metadata.
+- Social sharing image configuration.
+- Configurable canonical URL.
+- Sitemap.
+- Robots configuration.
+- Appropriate heading hierarchy.
+- Descriptive image alt text.
+- Optimized image loading.
+- Sensible font loading.
+- Lightweight animations.
+- Appropriate structured data when accurate.
+
+Do not invent a production domain.
+
+Do not create fake review ratings or unsupported structured data.
+
+Keep performance in mind when selecting dependencies and visual effects.
+
+---
+
+# 25. ANALYTICS PREPARATION
+
+Prepare a configurable, privacy-conscious analytics integration.
+
+Useful events include:
+
+- Consultation CTA clicked.
+- Booking form started.
+- Booking form submitted.
+- Booking successfully created.
+- Checkout started.
+- Payment confirmed.
+
+Do not send names, emails, project descriptions, or other personal data to analytics services.
+
+The website must continue to work when analytics is disabled.
+
+---
+
+# 26. REQUIRED PROJECT FILES
+
+Create the actual files required by the selected implementation.
+
+At minimum, organize the project into appropriate equivalents of:
+
+src/app/layout.tsx
+src/app/page.tsx
+src/app/globals.css
+src/app/not-found.tsx
+src/app/privacy/page.tsx
+src/app/terms/page.tsx
+src/app/admin/page.tsx
+src/app/admin/login/page.tsx
+src/app/api/consultations/route.ts
+
+src/components/layout/Navbar.tsx
+src/components/layout/Footer.tsx
+
+src/components/sections/Hero.tsx
+src/components/sections/Capabilities.tsx
+src/components/sections/Services.tsx
+src/components/sections/Industries.tsx
+src/components/sections/Process.tsx
+src/components/sections/Portfolio.tsx
+src/components/sections/WhyByteSync.tsx
+src/components/sections/Testimonials.tsx
+src/components/sections/Consultation.tsx
+src/components/sections/Contact.tsx
+
+src/components/booking/ConsultationForm.tsx
+src/components/booking/BookingConfirmation.tsx
+
+src/config/site.ts
+src/config/services.ts
+src/config/portfolio.ts
+src/config/testimonials.ts
+
+src/lib/supabase/client.ts
+src/lib/supabase/server.ts
+src/lib/validation/
+src/lib/email/
+src/lib/payments/
+
+src/types/index.ts
+
+supabase/migrations/
+
+tests/
+
+.env.example
+.gitignore
+README.md
+package.json
+tsconfig.json
+
+Adapt file locations as required by the actual framework version and implementation.
+
+Do not create empty files just to match the list.
+
+Every created file must contain the code needed for its intended purpose.
+
+Do not place the entire website in one enormous React component.
+
+---
+
+# 27. ENVIRONMENT VARIABLES
+
+Create .env.example containing placeholder values only.
+
+Include the variables required by the actual implementation, such as:
+
+NEXT_PUBLIC_SITE_URL=
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+SUPABASE_SERVICE_ROLE_KEY=
+RESEND_API_KEY=
+EMAIL_FROM=
+BUSINESS_NOTIFICATION_EMAIL=
+PAYMENT_PROVIDER=
+PAYMENT_SECRET_KEY=
+PAYMENT_WEBHOOK_SECRET=
+
+Adjust these names according to the chosen integrations.
+
+Never put real credentials into the example file.
+
+Never commit .env.local or other private environment files.
+
+Explain how to configure the required environment variables in README.md.
+
+---
+
+# 28. QUALITY ASSURANCE
+
+After implementation, run the available project checks.
+
+At minimum, attempt:
+
+- Dependency installation.
+- ESLint.
+- TypeScript type checking.
+- Production build.
+- Automated tests where implemented.
+
+Fix errors discovered during these checks.
+
+If browser-preview tools are available, inspect the running website.
+
+Check:
+
+- Desktop layout.
+- Mobile layout.
+- Navigation behavior.
+- Logo display.
+- CTA destinations.
+- Form validation.
+- Booking submission.
+- Error and success states.
+- Admin access protection.
+- Console errors.
+- Responsive overflow.
+
+Do not claim a check passed unless you actually ran it.
+
+Clearly report any checks that could not be completed.
+
+---
+
+# 29. IMPLEMENTATION PRIORITIES
+
+Work in this order.
+
+PHASE 1:
+Create the project structure, design system, responsive homepage, and reusable sections.
+
+PHASE 2:
+Implement the consultation form, server-side validation, Supabase schema, and booking persistence.
+
+PHASE 3:
+Implement email notifications and the protected administrator dashboard.
+
+PHASE 4:
+Prepare and document payment and calendar integration.
+
+PHASE 5:
+Run checks, fix bugs, inspect responsive behavior, and prepare deployment instructions.
+
+Do not stop after writing the plan.
+
+Complete each phase as far as the current environment allows.
+
+If an external service requires credentials, continue implementing other parts of the application rather than blocking the entire project.
+
+---
+
+# 30. FINAL DELIVERABLES
+
+When finished, provide:
+
+1. Summary of the website created.
+2. Actual project structure.
+3. Main files created.
+4. Features that work.
+5. Features requiring external configuration.
+6. Commands to run the website locally.
+7. Environment variables that must be supplied.
+8. Supabase database setup instructions.
+9. Email configuration instructions.
+10. Deployment instructions.
+11. Results of linting, type checking, tests, and production build.
+12. Remaining tasks before production launch.
+
+The final result must be a real, maintainable codebase.
+
+It must not be merely a visual mockup or an unimplemented template.
+
+Start by inspecting the workspace and verifying the original logo at:
+
+public/images/bytesync_logo.png
+
+Then implement the project step by step.
